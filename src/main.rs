@@ -10,7 +10,7 @@ async fn main() -> tide::Result<()> {
     app.at("/plus_one/:x/:y").get(plus_one);
     app.at("/less_one/:x/:y").get(less_one);
     println!("😎 Running - Listening on port 3000");
-    app.listen("127.0.0.1:3000").await?;
+    app.listen("0.0.0.0:3000").await?;
 
     Ok(())
 }
